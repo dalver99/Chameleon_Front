@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
+import path from 'path';
 
 export async function GET() {
   try {
@@ -22,7 +23,8 @@ export async function POST(req) {
   try {
     const { region, date } = await req.json();
 
-    const rawData = fs.readFileSync("./subDB/exposure.json", "utf-8");
+    const filePath = path.join(process.cwd(), 'subDB', 'exposure.json');
+    const rawData = fs.readFileSync(filePath, "utf-8");
     const results = JSON.parse(rawData);
 
     const startTimeUTC = new Date(`${date}T00:00:00+09:00`).toISOString();
