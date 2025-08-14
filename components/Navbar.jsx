@@ -77,7 +77,12 @@ const Navbar = () => {
 
           {/** 로고 */}
           <Link href='/'>
-            <img className="w-10 h-10" src="https://cdn-icons-png.flaticon.com/512/427/427496.png" alt="ChamelNeon" />
+            <Image 
+              width={20}
+              height={20}
+              className="w-10 h-10" 
+              src="https://cdn-icons-png.flaticon.com/512/427/427496.png" 
+              alt="ChamelNeon" />
           </Link>
 
           <button

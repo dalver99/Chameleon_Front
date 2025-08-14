@@ -37,6 +37,7 @@ export default function Footer() {
             </button> */}
               {/** 원페이저 */}
               <button
+                aria-label="OnePager"
                 className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-neutral-900 transition-colors"
                 onClick={() => window.open(process.env.NEXT_PUBLIC_ONEPAGER_URL, '_blank')}
               >
@@ -44,6 +45,7 @@ export default function Footer() {
               </button>
               {/** PPT */}
               <button
+                aria-label="PPT"
                 className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-neutral-900 transition-colors"
                 onClick={() => window.open(process.env.NEXT_PUBLIC_PPT_URL, '_blank')}
               >

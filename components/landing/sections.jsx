@@ -108,8 +108,10 @@ const Section1 = () => {
         <div className="sm:hidden">오프라인 광고도</div>
         <div className="hidden sm:block">이제는 오프라인 광고도</div>
         <div className="flex flex-row">
-          <div style={{
-            color: color,
+          <div 
+          className="text-green-700"
+          style={{
+            //color: color,
             transition: 'color 2s ease',
           }}>변화</div>
           <div className="">가 필요한 순간</div>
@@ -140,7 +142,15 @@ const Section1 = () => {
 
       {/** gif */}
       <div className="mt-5 w-full max-w-5xl h-fit shadow-[0_0_45px_10px_rgba(34,197,94,0.5)]" ref={imgRef}>
-        {!isCodeActive ? (
+        <Image
+            src="/landing-png.png"
+            alt=""
+            className="w-full h-auto object-cover"
+            width={1200}
+            height={800}
+            unoptimized
+          />
+        {/* {!isCodeActive ? (
           <Image
             src="/landing-image.gif"
             alt=""
@@ -155,12 +165,12 @@ const Section1 = () => {
             alt="AIVLE School 6기 9조 이정하패밀리"
             className="w-full h-auto object-cover"
           />
-        )}
+        )} */}
 
       </div>
 
       <div
-        className="text-center px-4 hover:bg-neutral-200 rounded-full py-1 text-green-600 cursor-pointer font-bold transition-colors"
+        className="text-center px-4 hover:bg-neutral-200 rounded-full py-1 text-green-700 cursor-pointer font-bold transition-colors"
         onClick={() => router.push('/model')}
       >
         {isCodeActive ? "AIVLE School 6기 9조 [이정하패밀리] with 매니저 이정하" : "모델 사용해보기"}
